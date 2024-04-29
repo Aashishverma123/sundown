@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Neue Haas Grotesk Display Pro";
+    color: #000000;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html{
+     overflow-x: hidden;
+}
+#main{
+    background-color: #EFEAE3 ;
+}
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2vw;
+    background-color: #EFEAE3;
+}
+nav{
+    height: 60px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    height: 50px;
+
+}
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-part2 h4{
+    position: relative;
+    font-size:1.1vw;
+    font-weight: 400;
+    padding: 7px 15px;
+    border-radius: 20px;
+    border: 1px solid #00000067;
+    z-index:999999999;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+.nav-part2 h4::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all ease 0.6s;
+
+}
+.nav-part2 h4:hover::after{
+    border-radius: 0;
+    top: 0;
+}
+.nav-part2 h4:hover{
+    color: #ffff;
+}
+.page1-bottom{
+    height: 80vh;
+    width: 100%;
+    border-bottom: 1px solid #0000003d;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: 4vw;
+}
+.page1-bottom h6{
+    font-size: 2vw;
+    font-weight: 600;
+
+}
+.page1-bottom h1{
+    font-size: 10vw;
+    font-weight: 600;
+    line-height: 8vw;
+    text-align: end;
+
+}
+.page1 .circle{
+      height: 400px;
+      width: 400px;
+      background-color: orangered;
+      position: absolute;
+      top: 78vh;
+      right: 0vw;
+      border-radius: 40%;
+      filter: blur(10px);
+    
+}
+.page1 .circle .cir1{
+    height: 300px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: orangered;
+    position: absolute;
+    filter: blur(10px);
+    animation-name: move2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    filter: blur(10px);
+}
+.page1 .circle .cir2{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: orangered;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    filter: blur(10px);
+}
+@keyframes move {
+    from{
+        transform: translate(-10% ,20%);
+    }
+    to{
+        transform: translate(20% ,-10%);
+    }
+}
+@keyframes move2 {
+    from{
+        transform: translate(0% ,0%);
+    }
+    to{
+        transform: translate(-40% ,10%);
+    }
+}
+.page1 video{
+    height: 100% ;
+    width: 100%;
+    position: relative;
+    z-index: 99999;
+    margin-top: 5vw;
+    border-radius: 20px;
+}
+.page2{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2vw;
+    background-color:#EFEAE3;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.page2::-webkit-scrollbar{
+    display: none;
+}
+.text-animation {
+    white-space: nowrap;
+    animation-name: animi;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.text-animation  h4{
+    display: inline-block;
+    font-size: 9vw;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 2vw;
+
+}
+.text-animation .gola{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:orangered;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-left: 2vw;
+
+
+}
+@keyframes animi {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+.page2-bottom{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw;
+}
+.page2-bottom h1{
+    position: relative;
+    font-size: 4.5vw;
+    font-weight: 600;
+    width: 65vw;
+    letter-spacing: -1px;
+    line-height: 4.3vw;
+    z-index: 999999;
+}
+.bottom-part2 .box{
+     height: 160px;
+     width: 250px;
+     border-radius: 10px;
+     overflow: hidden;
+     margin-bottom: 3vw;
+}
+.bottom-part2 {
+    margin-top: 8vw;
+}
+.bottom-part2 .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+.bottom-part2 p{
+    font-size: 1.2vw;
+    font-weight: 300;
+    width: 20vw;
+
+    
+}
+.page2 .next-circle{
+    height: 350px;
+    width: 350px;
+    background: linear-gradient( to right top, rgb(237, 37, 6) ,rgb(249, 109, 54));
+    position: absolute;
+    top: 55vh;
+    left: 20%;
+    border-radius: 50%;
+    filter: blur(15px);
+    animation-name: animate;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+@keyframes animate {
+    from{
+        transform: translate(-10% ,10%) skew(0deg);
+    }
+    to{
+        transform: translate(20% ,-10%) skew(15deg);
+    }
+}
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+     margin-top: 5vw;
+}
+.page3 .elem{
+    height: 90px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #00000055;
+    padding: 0 2vw;
+
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: orange;
+    transition: all ease 0.5s;
+
+}
+.elem .text-box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9999;
+}
+.text-box h1{
+    font-size: 3.8vw;
+    font-weight: 600;
+
+}
+.box-part2{
+    display: flex;
+    flex-direction: column;
+    gap: 1w;
+    align-items: end;
+}
+.box-part2 h4{
+    font-size: 1.2vw;
+    font-weight: 500;
+
+}
+.box-part2 h6{
+    font-size: 1.2vw;
+    font-weight: 300;
+    color: #1100006c;
+    
+}
+.elem:hover .overlay{
+    top: 0;
+
+}
+.image-box{
+    height: 300px;
+    width: 250px;
+    position: absolute;
+    background-color: red;
+    z-index: 9999;
+    top: 30vh;
+    left: 55%;
+    border-radius: 10px;
+    display: none;
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+}
+.page4{
+    height: 100vh;
+    width: 100%;
+}
